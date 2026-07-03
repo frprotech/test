@@ -100,7 +100,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 20px;
+  padding: 2px 20px;
   gap: 16px;
 }
 .logo {
@@ -109,7 +109,7 @@ img { max-width: 100%; display: block; }
   gap: 8px;
 }
 .logo img { height: 34px; width: auto; }
-.logo-stacked img { height: 80px; width: auto; }
+.logo-stacked img { height: 96px; width: auto; display: block; }
 .logo-text {
   font-family: 'Bricolage Grotesque', sans-serif;
   font-weight: 800;
@@ -554,7 +554,7 @@ img { max-width: 100%; display: block; }
 
   .main-nav { display: flex; }
   .mobile-toggle { display: none; }
-  .logo-stacked img { height: 92px; }
+  .logo-stacked img { height: 112px; }
 
   .hero {
     min-height: 850px;
