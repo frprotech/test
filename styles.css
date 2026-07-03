@@ -84,16 +84,16 @@ img { max-width: 100%; display: block; }
 
 /* Header */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 100;
   width: calc(100% - 32px);
   max-width: 1200px;
-  margin: 12px auto 0;
-  background-image: url('assets/images/bg-hero.png');
-  background-size: cover;
-  background-position: center;
+  background: #fff;
   border-radius: 100px;
+  box-shadow: 0 8px 24px rgba(23, 21, 42, 0.1);
 }
 .header-inner { position: relative; }
 .header-inner {
@@ -182,7 +182,7 @@ img { max-width: 100%; display: block; }
 /* Hero */
 .hero {
   position: relative;
-  padding: 40px 0 20px;
+  padding: 130px 0 20px;
   background-image: url('assets/images/bg-hero.png');
   background-size: cover;
   background-position: center;
@@ -558,7 +558,7 @@ img { max-width: 100%; display: block; }
 
   .hero {
     min-height: 850px;
-    padding: 70px 0 30px;
+    padding: 150px 0 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
