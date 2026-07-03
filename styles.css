@@ -90,9 +90,10 @@ img { max-width: 100%; display: block; }
   width: calc(100% - 32px);
   max-width: 1200px;
   margin: 12px auto 0;
-  background: #fff;
+  background-image: url('assets/images/bg-hero.png');
+  background-size: cover;
+  background-position: center;
   border-radius: 100px;
-  box-shadow: 0 8px 24px rgba(23, 21, 42, 0.1);
 }
 .header-inner { position: relative; }
 .header-inner {
@@ -108,7 +109,7 @@ img { max-width: 100%; display: block; }
   gap: 8px;
 }
 .logo img { height: 34px; width: auto; }
-.logo-stacked img { height: 68px; width: auto; }
+.logo-stacked img { height: 80px; width: auto; }
 .logo-text {
   font-family: 'Bricolage Grotesque', sans-serif;
   font-weight: 800;
@@ -553,10 +554,10 @@ img { max-width: 100%; display: block; }
 
   .main-nav { display: flex; }
   .mobile-toggle { display: none; }
-  .logo-stacked img { height: 76px; }
+  .logo-stacked img { height: 92px; }
 
   .hero {
-    min-height: 900px;
+    min-height: 850px;
     padding: 70px 0 30px;
     display: flex;
     flex-direction: column;
