@@ -7,7 +7,7 @@
 <link rel="icon" type="image/png" href="assets/images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -39,28 +39,81 @@
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-bg-shape"></div>
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <h1>Your Marketing Team Without The Payroll.</h1>
-        <p>We help South Florida restaurants, retail shops, spas, and neighborhood businesses stay consistently visible with affordable, done-for-you email marketing, social media, blogging, and review management.</p>
-        <a href="#how-it-works" class="btn btn-primary">See How It Works <span class="arrow">&#8594;</span></a>
-      </div>
-      <div class="hero-media">
-        <div class="hero-media-frame">
-          <div class="dot-pattern dot-pattern-tl"></div>
-          <img src="assets/images/hero-coffee-shop.jpg" alt="South Florida small business owners behind their counter">
-          <div class="dot-pattern dot-pattern-br"></div>
+    <div class="container">
+      <div class="hero-slides">
+        <div class="hero-slide is-active">
+          <div class="hero-inner">
+            <div class="hero-text">
+              <h1>Your Marketing Team Without The Payroll.</h1>
+              <p>We help South Florida restaurants, retail shops, spas, and neighborhood businesses stay consistently visible with affordable, done-for-you email marketing, social media, blogging, and review management.</p>
+              <a href="#how-it-works" class="btn btn-primary">See How It Works <span class="arrow">&#8594;</span></a>
+            </div>
+            <div class="hero-media">
+              <div class="hero-media-frame">
+                <div class="dot-pattern dot-pattern-tl"></div>
+                <img src="assets/images/hero-coffee-shop.jpg" alt="South Florida small business owners behind their counter">
+                <div class="dot-pattern dot-pattern-br"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-slide">
+          <div class="hero-inner">
+            <div class="hero-text">
+              <h1>Emails Your Customers Actually Open.</h1>
+              <p>One professionally designed campaign a week, written and sent for you, so your inbox stays a source of revenue instead of a chore on your to-do list.</p>
+              <a href="#services" class="btn btn-primary">See How It Works <span class="arrow">&#8594;</span></a>
+            </div>
+            <div class="hero-media">
+              <div class="hero-media-frame">
+                <div class="dot-pattern dot-pattern-tl"></div>
+                <img src="assets/images/hero-coffee-shop.jpg" alt="South Florida small business owners behind their counter">
+                <div class="dot-pattern dot-pattern-br"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-slide">
+          <div class="hero-inner">
+            <div class="hero-text">
+              <h1>Social Posts That Keep You Top Of Mind.</h1>
+              <p>A consistent weekly presence across your platforms, planned and published for you, so your feed never goes stale again.</p>
+              <a href="#services" class="btn btn-primary">See How It Works <span class="arrow">&#8594;</span></a>
+            </div>
+            <div class="hero-media">
+              <div class="hero-media-frame">
+                <div class="dot-pattern dot-pattern-tl"></div>
+                <img src="assets/images/hero-coffee-shop.jpg" alt="South Florida small business owners behind their counter">
+                <div class="dot-pattern dot-pattern-br"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-slide">
+          <div class="hero-inner">
+            <div class="hero-text">
+              <h1>Reviews That Build Real Trust.</h1>
+              <p>We systematically request and respond to reviews across every platform, turning happy customers into your best marketing asset.</p>
+              <a href="#services" class="btn btn-primary">See How It Works <span class="arrow">&#8594;</span></a>
+            </div>
+            <div class="hero-media">
+              <div class="hero-media-frame">
+                <div class="dot-pattern dot-pattern-tl"></div>
+                <img src="assets/images/hero-coffee-shop.jpg" alt="South Florida small business owners behind their counter">
+                <div class="dot-pattern dot-pattern-br"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="hero-carousel-controls container">
       <button class="carousel-arrow" aria-label="Previous slide">&#8592;</button>
       <div class="carousel-dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+        <span class="dot" data-slide="3"></span>
       </div>
       <button class="carousel-arrow" aria-label="Next slide">&#8594;</button>
     </div>
@@ -75,11 +128,11 @@
       <div class="pain-content">
         <h2>Are Any Of These You?</h2>
         <ul class="check-list">
-          <li><span class="check-icon">&#10003;</span>Too busy running your business to focus on marketing?</li>
-          <li><span class="check-icon">&#10003;</span>Struggling to generate consistent referrals?</li>
-          <li><span class="check-icon">&#10003;</span>Finding that your reviews are not growing?</li>
-          <li><span class="check-icon">&#10003;</span>Watching your social media pages go stale?</li>
-          <li><span class="check-icon">&#10003;</span>Not sure where to start?</li>
+          <li><img class="check-icon" src="assets/icons/check-small.svg" alt="">Too busy running your business to focus on marketing?</li>
+          <li><img class="check-icon" src="assets/icons/check-small.svg" alt="">Struggling to generate consistent referrals?</li>
+          <li><img class="check-icon" src="assets/icons/check-small.svg" alt="">Finding that your reviews are not growing?</li>
+          <li><img class="check-icon" src="assets/icons/check-small.svg" alt="">Watching your social media pages go stale?</li>
+          <li><img class="check-icon" src="assets/icons/check-small.svg" alt="">Not sure where to start?</li>
         </ul>
         <p class="pain-footer-text">You built the business, let us help build the growth.</p>
         <a href="#contact" class="btn btn-primary">Schedule a Call <span class="arrow">&#8594;</span></a>
@@ -100,33 +153,25 @@
 
       <div class="service-cards">
         <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg>
-          </div>
+          <div class="service-icon"><img src="assets/icons/service-email.svg" alt=""></div>
           <h3>Email Marketing</h3>
           <p>One campaign per week. Designed, written, deployed. We manage your database and keep customers engaged.</p>
           <a href="#pricing" class="btn btn-outline">Explore Our Services <span class="arrow">&#8594;</span></a>
         </div>
         <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2.5"/><path d="M8 21h8M12 17v4"/><circle cx="9" cy="10.5" r="1"/><circle cx="15" cy="10.5" r="1"/></svg>
-          </div>
+          <div class="service-icon"><img src="assets/icons/service-social.svg" alt=""></div>
           <h3>Social Media Posting</h3>
           <p>One consistent post per week to stay visible and relevant across your platforms.</p>
           <a href="#pricing" class="btn btn-outline">Explore Our Services <span class="arrow">&#8594;</span></a>
         </div>
         <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg>
-          </div>
+          <div class="service-icon"><img src="assets/icons/service-review.svg" alt=""></div>
           <h3>Review Optimization</h3>
           <p>We systematically request reviews from segmented lists and respond to every one. Nothing random. Nothing forgotten.</p>
           <a href="#pricing" class="btn btn-outline">Explore Our Services <span class="arrow">&#8594;</span></a>
         </div>
         <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M15 3v4h4"/><path d="M8 12h8M8 15.5h8M8 8.5h4"/></svg>
-          </div>
+          <div class="service-icon"><img src="assets/icons/service-blog.svg" alt=""></div>
           <h3>Blog Content</h3>
           <p>SEO-friendly blog posts that build authority and keep your site fresh and discoverable.</p>
           <a href="#pricing" class="btn btn-outline">Explore Our Services <span class="arrow">&#8594;</span></a>
@@ -187,10 +232,10 @@
         <p class="pricing-desc">Best for businesses looking for simple, ongoing marketing support.</p>
         <div class="price"><span class="amount">$195</span> <span class="period">/ per month</span></div>
         <ul class="pricing-list">
-          <li><span class="check-icon">&#10003;</span>No long contracts.</li>
-          <li><span class="check-icon">&#10003;</span>No hidden fees.</li>
-          <li><span class="check-icon">&#10003;</span>Cancel anytime.</li>
-          <li><span class="check-icon">&#10003;</span>Just reliable marketing outreach – done for you.</li>
+          <li><img class="check-icon" src="assets/icons/check-large.svg" alt="">No long contracts.</li>
+          <li><img class="check-icon" src="assets/icons/check-large.svg" alt="">No hidden fees.</li>
+          <li><img class="check-icon" src="assets/icons/check-large.svg" alt="">Cancel anytime.</li>
+          <li><img class="check-icon" src="assets/icons/check-large.svg" alt="">Just reliable marketing outreach – done for you.</li>
         </ul>
         <a href="#contact" class="btn btn-primary btn-block">Select Your Add-ons</a>
       </div>
@@ -200,7 +245,7 @@
   <!-- CTA -->
   <section class="cta">
     <div class="container cta-inner">
-      <div class="cta-icon">&#128188;</div>
+      <img class="cta-icon" src="assets/icons/inbox.svg" alt="">
       <h2>Ready To Stop Letting Marketing Fall Behind?</h2>
       <p>We'll put a simple, consistent marketing system in place – without adding to your workload.</p>
       <a href="#contact" class="btn btn-primary">Schedule a Call <span class="arrow">&#8594;</span></a>
@@ -219,10 +264,10 @@
       </a>
       <p>Consistent marketing that keeps your business top of mind without taking up your time.</p>
       <div class="social-links">
-        <a href="#" aria-label="Facebook">&#xf39e;</a>
-        <a href="#" aria-label="Twitter">&#xf099;</a>
-        <a href="#" aria-label="Instagram">&#xf16d;</a>
-        <a href="#" aria-label="LinkedIn">&#xf0e1;</a>
+        <a href="#" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt=""></a>
+        <a href="#" aria-label="Twitter"><img src="assets/icons/twitter.svg" alt=""></a>
+        <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a>
+        <a href="#" aria-label="Youtube"><img src="assets/icons/youtube.svg" alt=""></a>
       </div>
     </div>
     <div class="footer-col">
@@ -249,9 +294,9 @@
     <div class="footer-col">
       <h4>Contact Us</h4>
       <ul class="contact-list">
-        <li><span class="contact-icon">&#9993;</span> support@outreach.biz</li>
-        <li><span class="contact-icon">&#9742;</span> 954-346-4800</li>
-        <li><span class="contact-icon">&#128205;</span> Coral Springs, FL.</li>
+        <li><img class="contact-icon" src="assets/icons/contact-email.svg" alt=""> support@outreach.biz</li>
+        <li><img class="contact-icon" src="assets/icons/contact-phone.svg" alt=""> 954-346-4800</li>
+        <li><img class="contact-icon" src="assets/icons/contact-location.svg" alt=""> Coral Springs, FL.</li>
       </ul>
     </div>
   </div>
