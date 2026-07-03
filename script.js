@@ -15,16 +15,27 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const dots = document.querySelectorAll('.hero-carousel-controls .dot');
+  const slides = document.querySelectorAll('.hero-slide');
   const prevArrow = document.querySelector('.carousel-arrow[aria-label="Previous slide"]');
   const nextArrow = document.querySelector('.carousel-arrow[aria-label="Next slide"]');
   let current = 0;
+  let autoplayTimer;
 
-  const setActive = (index) => {
-    dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
-    current = index;
+  const goTo = (index) => {
+    const total = slides.length;
+    current = (index + total) % total;
+    slides.forEach((slide, i) => slide.classList.toggle('is-active', i === current));
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === current));
   };
 
-  dots.forEach((dot, i) => dot.addEventListener('click', () => setActive(i)));
-  prevArrow.addEventListener('click', () => setActive((current - 1 + dots.length) % dots.length));
-  nextArrow.addEventListener('click', () => setActive((current + 1) % dots.length));
+  const startAutoplay = () => {
+    clearInterval(autoplayTimer);
+    autoplayTimer = setInterval(() => goTo(current + 1), 6000);
+  };
+
+  dots.forEach((dot, i) => dot.addEventListener('click', () => { goTo(i); startAutoplay(); }));
+  prevArrow.addEventListener('click', () => { goTo(current - 1); startAutoplay(); });
+  nextArrow.addEventListener('click', () => { goTo(current + 1); startAutoplay(); });
+
+  if (slides.length) startAutoplay();
 });
