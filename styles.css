@@ -1,6 +1,6 @@
 :root {
-  --purple: #7C2AE8;
-  --purple-dark: #6620C4;
+  --purple: #8415A7;
+  --purple-dark: #6C1188;
   --orange: #F4713F;
   --orange-dark: #E15A28;
   --cyan: #29ABE2;
@@ -551,7 +551,7 @@ img { max-width: 100%; display: block; }
   gap: 40px;
 }
 .footer-brand .footer-logo { margin-bottom: 14px; }
-.footer-brand .footer-logo img { height: 72px; }
+.footer-brand .footer-logo img { height: 108px; }
 .footer-brand p {
   color: var(--gray);
   font-size: 0.88rem;
@@ -640,7 +640,7 @@ img { max-width: 100%; display: block; }
 
   .pricing { margin: 0 40px; padding: 80px 0; }
   .pricing-content h2 { font-size: 2.1rem; }
-  .pricing-card { max-width: 420px; margin-left: auto; }
+  .pricing-card { max-width: 540px; margin-left: auto; }
 
   .cta h2 { font-size: 2rem; }
 }
