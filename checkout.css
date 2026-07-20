@@ -149,69 +149,33 @@
 }
 .field input::placeholder { color: #A9A7B3; }
 
-.card-field { position: relative; }
-.card-field input { padding-right: 44px; font-size: 0.85rem; }
-.card-brand-icons {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  gap: 6px;
+#payment-element {
+  border: 1px solid #E1E0E8;
+  border-radius: 10px;
+  padding: 14px;
+  min-height: 20px;
 }
-.card-brand {
-  font-size: 0.6rem;
-  font-weight: 700;
-  color: #fff;
-  border-radius: 4px;
-  padding: 3px 5px;
-  letter-spacing: 0.02em;
-}
-.card-brand-amex,
-.card-brand-disc { display: none; }
+#payment-element:empty { padding: 0; border-color: transparent; }
 
-@media (min-width: 480px) {
-  .card-field input { padding-right: 92px; font-size: 0.95rem; }
-  .card-brand-amex,
-  .card-brand-disc { display: inline-block; }
+.payment-element-placeholder {
+  color: var(--gray);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  margin-top: 8px;
 }
+.payment-element-placeholder[hidden] { display: none; }
 
-@media (min-width: 900px) {
-  .card-field input { padding-right: 150px; }
+.checkout-error {
+  color: #C0392B;
+  background: #FBEAE8;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  margin-bottom: 14px;
 }
-.card-brand-visa { background: #1A1F71; }
-.card-brand-mc { background: #EB5B2E; }
-.card-brand-amex { background: #2E77BC; }
-.card-brand-disc { background: #E97316; }
-
-.card-field-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-top: 10px;
-}
-.cvc-field { position: relative; }
-.cvc-field input { padding-right: 38px; }
-.cvc-icon {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 14px;
-  background: #E1E0E8;
-  border-radius: 3px;
-  font-size: 0;
-}
-
-.checkout-select-group {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-}
-.checkout-select-group select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--gray) 50%), linear-gradient(135deg, var(--gray) 50%, transparent 50%); background-position: calc(100% - 18px) center, calc(100% - 13px) center; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }
 
 .checkout-submit { margin-top: 6px; font-size: 1rem; }
+.checkout-submit:disabled { opacity: 0.65; cursor: not-allowed; transform: none; }
 .checkout-terms {
   color: var(--gray);
   font-size: 0.78rem;

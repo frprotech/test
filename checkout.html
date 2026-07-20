@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="checkout.css">
+<script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
 
@@ -118,43 +119,22 @@
           </div>
 
           <div class="field">
-            <label for="cf-card">Card information</label>
-            <div class="card-field">
-              <input type="text" id="cf-card" name="cardNumber" inputmode="numeric" required placeholder="1234 1234 1234 1234" maxlength="19">
-              <div class="card-brand-icons" aria-hidden="true">
-                <span class="card-brand card-brand-visa">VISA</span>
-                <span class="card-brand card-brand-mc">MC</span>
-                <span class="card-brand card-brand-amex">AMEX</span>
-                <span class="card-brand card-brand-disc">DISC</span>
-              </div>
-            </div>
-            <div class="card-field-row">
-              <input type="text" name="expiry" required placeholder="MM / YY" maxlength="7">
-              <div class="cvc-field">
-                <input type="text" name="cvc" inputmode="numeric" required placeholder="CVC" maxlength="4">
-                <span class="cvc-icon" aria-hidden="true">&#9724;</span>
-              </div>
-            </div>
+            <label>Card information</label>
+            <div id="payment-element"><!-- Stripe mounts its secure card form here --></div>
+            <p class="payment-element-placeholder" id="payment-placeholder">Enter your email and name above, then click "Continue to Payment" to load the secure card form.</p>
           </div>
 
-          <div class="field">
-            <label for="cf-country">Country or region</label>
-            <div class="checkout-select-group">
-              <select id="cf-country" name="country">
-                <option>United States</option>
-                <option>Canada</option>
-                <option>United Kingdom</option>
-                <option>Australia</option>
-              </select>
-              <input type="text" name="zip" placeholder="ZIP" class="zip-input">
-            </div>
-          </div>
+          <div id="payment-error" class="checkout-error" role="alert" hidden></div>
 
-          <button type="submit" class="btn btn-primary btn-block checkout-submit">
-            Complete Purchase (<span id="submit-total">$0</span>)
+          <button type="button" id="continue-btn" class="btn btn-primary btn-block checkout-submit">
+            Continue to Payment
           </button>
-          <p class="checkout-terms">This is a demo checkout — no payment is processed. By clicking Pay, you agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
-          <p class="checkout-confirm" id="checkout-confirm" role="status" hidden>Thanks! This is a demo — your card was not charged.</p>
+          <button type="submit" id="pay-btn" class="btn btn-primary btn-block checkout-submit" hidden>
+            <span id="pay-btn-label">Complete Purchase (<span id="submit-total">$0</span>/mo)</span>
+            <span id="pay-btn-spinner" hidden>Processing…</span>
+          </button>
+          <p class="checkout-terms">You'll be charged <span id="terms-total">$0</span>/month, billed automatically until you cancel. By clicking Pay, you agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
+          <p class="checkout-confirm" id="checkout-confirm" role="status" hidden>Thanks! Your subscription is active.</p>
         </form>
       </div>
 
