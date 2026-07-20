@@ -5,7 +5,7 @@
 //              stripe-subscription-endpoint.php snippet, e.g.
 //              'https://yoursite.com/wp-json/outreach/v1'
 // ---------------------------------------------------------------------------
-const STRIPE_PUBLISHABLE_KEY = 'pk_test_REPLACE_ME';
+const STRIPE_PUBLISHABLE_KEY = 'pk_test_51PNKTYKHsH73ukq1M3UFk8RcEyI8eupxPPIcnkW3RWN4ynO158uNKB30lqlu8UkbjOS08owBGPkANom3y6OrJEBW00dHpShxV1';
 const WP_API_BASE = '/wp-json/outreach/v1';
 
 document.addEventListener('DOMContentLoaded', () => {
