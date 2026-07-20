@@ -55,7 +55,7 @@
 
         <ul class="cart-list" id="cart-list">
           <li class="cart-item" data-plan="email" data-fixed-price="195">
-            <button type="button" class="cart-check is-checked" aria-pressed="true" aria-label="Toggle Email Marketing Plan">
+            <button type="button" class="cart-check" aria-pressed="false" aria-label="Toggle Email Marketing Plan">
               <svg viewBox="0 0 16 16" fill="none"><path d="M3.5 8.5l3 3 6-7" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
             <span class="cart-item-name">1x Email Marketing Plan</span>
@@ -63,11 +63,11 @@
           </li>
 
           <li class="cart-item" data-plan="review" data-price-with-email="45" data-price-without-email="95">
-            <button type="button" class="cart-check is-checked" aria-pressed="true" aria-label="Toggle Review Plan">
+            <button type="button" class="cart-check" aria-pressed="false" aria-label="Toggle Review Plan">
               <svg viewBox="0 0 16 16" fill="none"><path d="M3.5 8.5l3 3 6-7" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
             <span class="cart-item-name">1x Review Plan</span>
-            <span class="cart-item-price-badge"><span class="cart-item-price">$45</span></span>
+            <span class="cart-item-price-badge"><span class="cart-item-price">$95</span></span>
           </li>
 
           <li class="cart-item" data-plan="blog" data-price-with-email="95" data-price-without-email="195">
@@ -75,15 +75,15 @@
               <svg viewBox="0 0 16 16" fill="none"><path d="M3.5 8.5l3 3 6-7" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
             <span class="cart-item-name">1x Blogging Plan</span>
-            <span class="cart-item-price-badge"><span class="cart-item-price">$95</span></span>
+            <span class="cart-item-price-badge"><span class="cart-item-price">$195</span></span>
           </li>
 
           <li class="cart-item" data-plan="social" data-price-with-email="45" data-price-without-email="95">
-            <button type="button" class="cart-check is-checked" aria-pressed="true" aria-label="Toggle Social Media Plan">
+            <button type="button" class="cart-check" aria-pressed="false" aria-label="Toggle Social Media Plan">
               <svg viewBox="0 0 16 16" fill="none"><path d="M3.5 8.5l3 3 6-7" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
             <span class="cart-item-name">1x Social Media Plan</span>
-            <span class="cart-item-price-badge"><span class="cart-item-price">$45</span></span>
+            <span class="cart-item-price-badge"><span class="cart-item-price">$95</span></span>
           </li>
 
           <li class="cart-item cart-item-bundle" data-plan="bundle" data-fixed-price="380">
@@ -98,7 +98,7 @@
 
         <div class="cart-total">
           <span>Total Due Today:</span>
-          <span class="total-amount" id="cart-total-amount">$285</span>
+          <span class="total-amount" id="cart-total-amount">$0</span>
         </div>
       </div>
 
@@ -151,7 +151,7 @@
           </div>
 
           <button type="submit" class="btn btn-primary btn-block checkout-submit">
-            Complete Purchase (<span id="submit-total">$285</span>)
+            Complete Purchase (<span id="submit-total">$0</span>)
           </button>
           <p class="checkout-terms">This is a demo checkout — no payment is processed. By clicking Pay, you agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
           <p class="checkout-confirm" id="checkout-confirm" role="status" hidden>Thanks! This is a demo — your card was not charged.</p>
