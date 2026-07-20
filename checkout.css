@@ -1,0 +1,241 @@
+.checkout-page {
+  padding: 130px 0 90px;
+  background:
+    radial-gradient(90% 70% at 8% 95%, #F3DCF2 0%, rgba(243,220,242,0) 60%),
+    radial-gradient(110% 80% at 95% 0%, #CDEFFB 0%, rgba(227,238,255,0) 65%),
+    #ffffff;
+}
+
+.checkout-heading {
+  text-align: center;
+  max-width: 60ch;
+  margin: 0 auto 40px;
+}
+.checkout-heading h1 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+.checkout-heading p {
+  color: var(--gray);
+  font-size: 0.98rem;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Cart */
+.cart-card,
+.checkout-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--card-shadow);
+  padding: 30px 26px;
+}
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--gray-light);
+}
+.cart-icon { width: 26px; height: 26px; color: var(--ink); flex: none; }
+.cart-header h2 { font-size: 1.5rem; }
+
+.cart-subheading {
+  color: var(--gray);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+}
+
+.cart-list { display: flex; flex-direction: column; gap: 4px; }
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+}
+.cart-item-name {
+  flex: 1;
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+.cart-item-bundle .cart-item-name { font-weight: 700; }
+
+.cart-check {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  background: #D9D6E3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.cart-check svg { width: 13px; height: 13px; opacity: 0; transition: opacity 0.15s ease; }
+.cart-check.is-checked { background: var(--cyan); }
+.cart-check.is-checked svg { opacity: 1; }
+.cart-check:hover { transform: scale(1.08); }
+.cart-check:disabled { cursor: not-allowed; opacity: 0.7; }
+
+.cart-item-price-badge {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--gray-light);
+  border-radius: 8px;
+  padding: 5px 10px;
+  background: #FAFAFC;
+}
+.cart-item-price { font-weight: 600; font-size: 0.92rem; }
+.cart-item.is-disabled { opacity: 0.55; }
+
+.cart-bundle-note {
+  color: var(--gray);
+  font-size: 0.82rem;
+  margin: 4px 0 0 38px;
+}
+
+.cart-total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--gray-light);
+  font-weight: 600;
+  font-size: 1rem;
+}
+.total-amount { font-size: 1.6rem; font-weight: 700; }
+
+/* Checkout form */
+.checkout-card h2 { font-size: 1.4rem; margin-bottom: 22px; }
+
+.field { margin-bottom: 18px; }
+.field label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.field input,
+.field select {
+  width: 100%;
+  border: 1px solid #E1E0E8;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-family: 'Onest', sans-serif;
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.field input:focus,
+.field select:focus {
+  outline: none;
+  border-color: var(--purple);
+  box-shadow: 0 0 0 3px rgba(132, 21, 167, 0.12);
+}
+.field input::placeholder { color: #A9A7B3; }
+
+.card-field { position: relative; }
+.card-field input { padding-right: 44px; font-size: 0.85rem; }
+.card-brand-icons {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 6px;
+}
+.card-brand {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 4px;
+  padding: 3px 5px;
+  letter-spacing: 0.02em;
+}
+.card-brand-amex,
+.card-brand-disc { display: none; }
+
+@media (min-width: 480px) {
+  .card-field input { padding-right: 92px; font-size: 0.95rem; }
+  .card-brand-amex,
+  .card-brand-disc { display: inline-block; }
+}
+
+@media (min-width: 900px) {
+  .card-field input { padding-right: 150px; }
+}
+.card-brand-visa { background: #1A1F71; }
+.card-brand-mc { background: #EB5B2E; }
+.card-brand-amex { background: #2E77BC; }
+.card-brand-disc { background: #E97316; }
+
+.card-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 10px;
+}
+.cvc-field { position: relative; }
+.cvc-field input { padding-right: 38px; }
+.cvc-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 14px;
+  background: #E1E0E8;
+  border-radius: 3px;
+  font-size: 0;
+}
+
+.checkout-select-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.checkout-select-group select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--gray) 50%), linear-gradient(135deg, var(--gray) 50%, transparent 50%); background-position: calc(100% - 18px) center, calc(100% - 13px) center; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }
+
+.checkout-submit { margin-top: 6px; font-size: 1rem; }
+.checkout-terms {
+  color: var(--gray);
+  font-size: 0.78rem;
+  text-align: center;
+  margin-top: 14px;
+  line-height: 1.5;
+}
+.checkout-terms a { color: var(--purple); text-decoration: underline; }
+
+.checkout-confirm {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #16794A;
+  background: #E7F8EF;
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+@media (min-width: 900px) {
+  .checkout-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .checkout-heading h1 { font-size: 2.3rem; }
+}
