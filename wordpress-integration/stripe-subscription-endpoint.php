@@ -105,6 +105,21 @@ add_action('rest_api_init', function () {
     ]);
 });
 
+// Stripe's Subscription API needs an existing Product ID for each price
+// (unlike Checkout Sessions, it does not accept inline product_data). This
+// creates each plan's product once and reuses it on every later request.
+function outreach_get_or_create_product($label) {
+    $option_key = 'outreach_stripe_product_' . md5($label);
+    $product_id = get_option($option_key);
+    if ($product_id) {
+        return $product_id;
+    }
+
+    $product = outreach_stripe_request('products', ['name' => $label]);
+    update_option($option_key, $product['id']);
+    return $product['id'];
+}
+
 function outreach_create_subscription(WP_REST_Request $request) {
     $body = $request->get_json_params();
     $plans = isset($body['plans']) && is_array($body['plans']) ? array_map('sanitize_text_field', $body['plans']) : [];
@@ -141,7 +156,7 @@ function outreach_create_subscription(WP_REST_Request $request) {
             $sub_params['items'][$i]['price_data']['currency'] = 'usd';
             $sub_params['items'][$i]['price_data']['unit_amount'] = $item['amount'];
             $sub_params['items'][$i]['price_data']['recurring']['interval'] = 'month';
-            $sub_params['items'][$i]['price_data']['product_data']['name'] = $item['label'];
+            $sub_params['items'][$i]['price_data']['product'] = outreach_get_or_create_product($item['label']);
         }
 
         $subscription = outreach_stripe_request('subscriptions', $sub_params);
