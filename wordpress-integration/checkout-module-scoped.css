@@ -1,6 +1,13 @@
 /* Scoped styles for the Outreach cart + payment module only.
    Everything is nested under .outreach-checkout-module so it cannot leak
-   into the rest of an existing site's design (fonts, box-sizing, etc). */
+   into the rest of an existing site's design (fonts, box-sizing, etc).
+
+   Paste this whole file into WordPress: Appearance > Customize > Additional
+   CSS (or Elementor's per-page Custom CSS panel if you have Pro). No file
+   upload needed for this part - just checkout.js still needs to be loaded
+   separately, see enqueue-module-assets-snippet.php. */
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Onest:wght@400;500;600;700&display=swap');
 
 .outreach-checkout-module {
   --oc-purple: #8415A7;
